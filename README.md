@@ -221,7 +221,7 @@ pio run --target erase
   - Configuraciones
 - Deja el ESP32 vacío (necesitarás volver a flashear)
 
-**⚠️ ADVERTENCIA:** Perderás todos los archivos `.bin` guardados.
+**ADVERTENCIA:** Perderás todos los archivos `.bin` guardados.
 
 ---
 
@@ -289,8 +289,8 @@ Cuando abres un proyecto PlatformIO en VS Code, verás una barra azul en la part
 ```
 Click: ✓ Build
 └─► Compila y verifica errores
-    Si sale ✅ SUCCESS → Todo bien
-    Si sale ❌ FAILED → Revisa errores en terminal
+    Si sale  SUCCESS → Todo bien
+    Si sale  FAILED → Revisa errores en terminal
 ```
 
 ##### **2. Subir al ESP32 (Primera vez)**
@@ -314,7 +314,7 @@ Click: ↻ Upload and Monitor
 
 ##### **4. Ver Salida del ESP32**
 ```
-Click: 🔌 Serial Monitor
+Click:  Serial Monitor
 └─► Abre monitor para ver Serial.println()
     ┌─────────────────────────────────────────┐
     │ Muestra:                                │
@@ -324,12 +324,12 @@ Click: 🔌 Serial Monitor
     │ - IP del servidor (192.168.4.1)        │
     └─────────────────────────────────────────┘
     
-    Para cerrar: Ctrl+C o click en 🗑️ (cerrar terminal)
+    Para cerrar: Ctrl+C o click en  (cerrar terminal)
 ```
 
 ##### **5. Limpiar Compilación**
 ```
-Click: 🗑️ Clean
+Click:  Clean
 └─► Elimina archivos .o y binarios compilados
     Usar cuando:
     - Cambias platformio.ini
@@ -690,13 +690,13 @@ Flash: [======    ]  67.9% (used 890965 bytes from 1310720 bytes)
 ```
 
 ```
-❌ Compilación fallida:
+ Compilación fallida:
 src/main.cpp:123:5: error: 'Serial' was not declared in this scope
 *** [.pio\build\esp32dev\src\main.cpp.o] Error 1
 ========================= [FAILED] Took X.XX seconds =========================
 ```
 
-## 📡 Uso
+##  Uso
 
 ### Conexión WiFi
 
@@ -705,7 +705,7 @@ src/main.cpp:123:5: error: 'Serial' was not declared in this scope
 │               PROCESO DE CONEXIÓN PASO A PASO               │
 └─────────────────────────────────────────────────────────────┘
 
-1️⃣ FLASHEAR ESP32
+1 FLASHEAR ESP32
    ┌────────────────────────────────────────────┐
    │ PC con VS Code + PlatformIO                │
    │   └─► Click "Upload and Monitor"          │
@@ -714,7 +714,7 @@ src/main.cpp:123:5: error: 'Serial' was not declared in this scope
            │
            │ (Desconectar USB - ESP32 con batería/fuente)
            ▼
-2️⃣ ESP32 CREA RED WiFi
+2 ESP32 CREA RED WiFi
    ┌────────────────────────────────────────────┐
    │ Red: ESP32-MPU6050                         │
    │ Password: 12345678                         │
@@ -722,7 +722,7 @@ src/main.cpp:123:5: error: 'Serial' was not declared in this scope
    └────────────────────────────────────────────┘
            │
            ▼
-3️⃣ CONECTAR DESDE TU DISPOSITIVO
+3 CONECTAR DESDE TU DISPOSITIVO
    ┌────────────────────────────────────────────┐
    │ Celular/Laptop:                            │
    │  • Abre configuración WiFi                 │
@@ -732,7 +732,7 @@ src/main.cpp:123:5: error: 'Serial' was not declared in this scope
    └────────────────────────────────────────────┘
            │
            ▼
-4️⃣ ABRIR NAVEGADOR
+4️ ABRIR NAVEGADOR
    ┌────────────────────────────────────────────┐
    │ Chrome / Safari / Firefox                  │
    │  • Dirección: http://192.168.4.1          │
@@ -751,22 +751,22 @@ src/main.cpp:123:5: error: 'Serial' was not declared in this scope
 
 La página web incluye:
 
-#### 📊 Datos en Tiempo Real (Tablas)
+####  Datos en Tiempo Real (Tablas)
 - Acelerómetro (X, Y, Z) en m/s²
 - Giroscopio (X, Y, Z) en rad/s
 - Temperatura en °C
 
-#### ⚙️ Control de Medición
+####  Control de Medición
 - **Duración**: 1-3600 segundos
 - **Frecuencia**: 10, 50, 100, 200 Hz
 - **Botones**: Iniciar/Detener
 
-#### 📁 Gestión de Archivos
+####  Gestión de Archivos
 - Lista de archivos CSV
 - Descargar archivos
 - Eliminar archivos
 
-## 🔧 Configuración Avanzada
+##  Configuración Avanzada
 
 ### Cambiar credenciales WiFi
 
@@ -790,7 +790,7 @@ const int MAX_SAMPLES = 10000;  // Ajusta según RAM disponible
 #define SCL_PIN 22
 ```
 
-## 📊 Formato de Datos
+##  Formato de Datos
 
 ### Almacenamiento Binario (Eficiente)
 
@@ -861,7 +861,7 @@ df = read_binary_data('data_12345.bin')
 print(df.head())
 ```
 
-## 🌐 API REST
+##  API REST
 
 ### Endpoints disponibles:
 
@@ -907,7 +907,7 @@ print(df.head())
 }
 ```
 
-## 🐍 Integración con Python
+##  Integración con Python
 
 ### ¿Cómo funciona Python con el ESP32?
 
@@ -980,7 +980,7 @@ Ejemplo práctico:
 └──────────────────────────────────────────────────────────┘
 ```
 
-## 🐍 Integración con Python
+##  Integración con Python
 
 ### Ejemplo de lectura de datos:
 
@@ -1009,7 +1009,7 @@ df = pd.read_csv('datos_esp32.csv')
 print(df.describe())
 ```
 
-## 📱 Acceso desde Python (similar al proyecto RaspberryPi)
+##  Acceso desde Python (similar al proyecto RaspberryPi)
 
 ```python
 class ESP32MPU6050:
@@ -1048,9 +1048,9 @@ time.sleep(35)
 esp32.download_latest_file("medicion.csv")
 ```
 
-## 🛠️ Troubleshooting
+##  Troubleshooting
 
-### ❌ Error: "Device not found"
+###  Error: "Device not found"
 **Problema:** PlatformIO no encuentra el puerto COM del ESP32
 
 **Soluciones:**
@@ -1069,7 +1069,7 @@ pio run --target upload --upload-port COM3
 
 ---
 
-### ❌ Error: "Timed out waiting for packet header"
+###  Error: "Timed out waiting for packet header"
 **Problema:** No se puede flashear el ESP32
 
 **Soluciones:**
@@ -1088,7 +1088,7 @@ pio run --target upload --upload-speed 115200
 
 ---
 
-### ❌ MPU6050 no detectado
+###  MPU6050 no detectado
 **Síntoma:** Monitor serial muestra "Error: MPU6050 no encontrado"
 
 **Soluciones:**
@@ -1109,7 +1109,7 @@ pio run --target upload --upload-speed 115200
 
 ---
 
-### ❌ No se conecta al WiFi "ESP32-MPU6050"
+###  No se conecta al WiFi "ESP32-MPU6050"
 **Problema:** La red WiFi no aparece
 
 **Soluciones:**
@@ -1132,7 +1132,7 @@ pio run --target upload --target monitor
 
 ---
 
-### ❌ Error de compilación: "LittleFS not declared"
+###  Error de compilación: "LittleFS not declared"
 **Problema:** Falta librería del sistema de archivos
 
 **Solución:**
@@ -1145,7 +1145,7 @@ pio run
 
 ---
 
-### ❌ RAM insuficiente / Reinicios inesperados
+###  RAM insuficiente / Reinicios inesperados
 **Síntoma:** ESP32 se reinicia solo, muestra "Brownout detector"
 
 **Solución:** Reducir `MAX_SAMPLES` en `src/main.cpp`
@@ -1159,7 +1159,7 @@ const int MAX_SAMPLES = 5000;   // ~140 KB RAM
 
 ---
 
-### ❌ Buffer lleno muy rápido
+###  Buffer lleno muy rápido
 **Problema:** Medición se detiene antes de tiempo
 
 **Solución:** Ajustar parámetros
@@ -1174,25 +1174,25 @@ const int MAX_SAMPLES = 5000;  // Guardar cada 5000 muestras
 
 ---
 
-### ❌ No puedo abrir http://192.168.4.1
+###  No puedo abrir http://192.168.4.1
 **Problema:** Navegador no carga la página
 
 **Checklist:**
-1. ✅ ¿Estás conectado a "ESP32-MPU6050"?
+1.  ¿Estás conectado a "ESP32-MPU6050"?
    - Ve a configuración WiFi del dispositivo
    - Verifica conexión activa
 
-2. ✅ ¿El ESP32 muestra "Servidor web iniciado"?
+2.  ¿El ESP32 muestra "Servidor web iniciado"?
    ```powershell
    pio device monitor
    # Debe mostrar: "Servidor web iniciado"
    ```
 
-3. ✅ ¿Tienes datos móviles activos?
+3.  ¿Tienes datos móviles activos?
    - **Desactiva datos móviles** en el celular
    - Solo usa WiFi
 
-4. ✅ Prueba URLs alternativas:
+4.  Prueba URLs alternativas:
    ```
    http://192.168.4.1
    http://192.168.4.1/
@@ -1233,7 +1233,7 @@ pio run
 
 ---
 
-### 📞 Obtener Más Ayuda
+###  Obtener Más Ayuda
 
 Si los problemas persisten:
 
@@ -1252,12 +1252,11 @@ Si los problemas persisten:
    pio --version
    ```
 
-## 📄 Licencia
+##  Licencia
 
 MIT License - Úsalo libremente para tus proyectos
 
-## 🤝 Contribuciones
-
+##  Contribuciones
 ¡Mejoras y sugerencias son bienvenidas!
 
 ---
