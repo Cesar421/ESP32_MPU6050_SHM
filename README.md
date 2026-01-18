@@ -103,16 +103,26 @@ Si no tienes PlatformIO instalado:
 3. Busca "PlatformIO IDE"
 4. Instala la extensión
 
-### 2. Clonar o Descargar Proyecto
+### 2. Clonar Proyecto desde GitHub
 
 ```powershell
 # Navegar a tu carpeta de proyectos
 cd "C:\Users\TU_USUARIO\Proyectos"
 
-# Si usas Git
-git clone https://github.com/tu-usuario/esp32-mpu6050.git
-cd esp32-mpu6050
+# Clonar el repositorio
+git clone https://github.com/Cesar421/ESP32_MPU6050_SHM.git
+
+# Entrar a la carpeta del proyecto
+cd ESP32_MPU6050_SHM
+
+# Instalar dependencias Python (opcional, solo si usarás scripts Python)
+pip install requests pandas numpy matplotlib
 ```
+
+**O descarga el ZIP:**
+1. Ve a https://github.com/Cesar421/ESP32_MPU6050_SHM
+2. Click en "Code" → "Download ZIP"
+3. Extrae y abre la carpeta en VS Code
 
 ## 🛠️ Comandos de Compilación y Flasheo
 
