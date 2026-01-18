@@ -2,23 +2,23 @@
 
 Sistema de medición con sensor MPU6050 y servidor web integrado para ESP32.
 
-## 🚀 Características
+## Características
 
-- ✅ Lectura de acelerómetro y giroscopio MPU6050
-- ✅ Access Point WiFi propio
-- ✅ Servidor web con visualización en tiempo real
-- ✅ Almacenamiento de datos en formato CSV
-- ✅ Descarga de archivos vía web
-- ✅ Interfaz responsive con tablas de datos
-- ✅ Control de mediciones (inicio/stop/duración)
+- Lectura de acelerómetro y giroscopio MPU6050
+- Access Point WiFi propio
+- Servidor web con visualización en tiempo real
+- Almacenamiento de datos en formato CSV
+- Descarga de archivos vía web
+- Interfaz responsive con tablas de datos
+- Control de mediciones (inicio/stop/duración)
 
-## 📋 Hardware Necesario
+## Hardware Necesario
 
 - ESP32 (cualquier modelo)
 - Sensor MPU6050
 - Cables de conexión
 
-## 🔌 Conexiones
+## Conexiones
 
 ```
 MPU6050  →  ESP32
@@ -28,7 +28,7 @@ SCL      →  GPIO 22
 SDA      →  GPIO 21
 ```
 
-## 🏗️ Arquitectura del Sistema
+## Arquitectura del Sistema
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -93,7 +93,7 @@ SDA      →  GPIO 21
 └─────────────────────────────────────────────────────────────┘
 ```
 
-## 📦 Instalación
+## Instalación
 
 ### 1. Instalar PlatformIO en VS Code
 
@@ -124,9 +124,9 @@ pip install requests pandas numpy matplotlib
 2. Click en "Code" → "Download ZIP"
 3. Extrae y abre la carpeta en VS Code
 
-## 🛠️ Comandos de Compilación y Flasheo
+## Comandos de Compilación y Flasheo
 
-### 📋 Comandos Básicos
+### Comandos Básicos
 
 #### 1. **Compilar (Build)**
 ```powershell
@@ -249,9 +249,9 @@ pio pkg update
 
 ---
 
-### 💻 Interfaz de PlatformIO en VS Code
+### Interfaz de PlatformIO en VS Code
 
-#### **Barra de Estado Inferior (Project Tasks)**
+#### Barra de Estado Inferior (Project Tasks)
 
 Cuando abres un proyecto PlatformIO en VS Code, verás una barra azul en la parte inferior con estos botones:
 
@@ -260,30 +260,30 @@ Cuando abres un proyecto PlatformIO en VS Code, verás una barra azul en la part
 │ BARRA INFERIOR DE VS CODE (cuando archivo del proyecto está abierto)       │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
-│  [🏠] [✓] [→] [↻] [🗑️] [🔌] [📊] [⚙️] [🐛]                                  │
+│  [HOME] [BUILD] [UPLOAD] [UPLOAD+MON] [CLEAN] [MONITOR] [TASKS] [TERM] [DEBUG]│
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-#### 📋 **Descripción de Cada Botón**
+#### Descripción de Cada Botón
 
 | Botón | Nombre | Comando Equivalente | Descripción |
 |-------|--------|---------------------|-------------|
-| **🏠 PlatformIO** | PlatformIO Home | - | Abre la página principal de PlatformIO |
-| **✓ Build** | Build Project | `pio run` | Compila el proyecto sin subirlo al ESP32 |
-| **→ Upload** | Upload | `pio run --target upload` | Sube el firmware al ESP32 conectado |
-| **↻ Upload and Monitor** | Upload and Monitor | `pio run --target upload --target monitor` | Sube el código y abre el monitor serial |
-| **🗑️ Clean** | Clean | `pio run --target clean` | Elimina archivos compilados |
-| **🔌 Serial Monitor** | Serial Monitor | `pio device monitor` | Abre el monitor serial (ver salida del ESP32) |
-| **📊 Tasks** | PlatformIO Tasks | - | Muestra todas las tareas disponibles |
-| **⚙️ Terminal** | New Terminal | - | Abre terminal de PlatformIO |
-| **🐛 Debug** | Start Debugging | - | Inicia depuración (requiere debugger hardware) |
+| **HOME** | PlatformIO Home | - | Abre la página principal de PlatformIO |
+| **BUILD** | Build Project | `pio run` | Compila el proyecto sin subirlo al ESP32 |
+| **UPLOAD** | Upload | `pio run --target upload` | Sube el firmware al ESP32 conectado |
+| **UPLOAD+MON** | Upload and Monitor | `pio run --target upload --target monitor` | Sube el código y abre el monitor serial |
+| **CLEAN** | Clean | `pio run --target clean` | Elimina archivos compilados |
+| **MONITOR** | Serial Monitor | `pio device monitor` | Abre el monitor serial (ver salida del ESP32) |
+| **TASKS** | PlatformIO Tasks | - | Muestra todas las tareas disponibles |
+| **TERM** | New Terminal | - | Abre terminal de PlatformIO |
+| **DEBUG** | Start Debugging | - | Inicia depuración (requiere debugger hardware) |
 
 ---
 
-#### 🖱️ **Uso Recomendado de los Botones**
+#### Uso Recomendado de los Botones
 
 ##### **1. Primera Compilación**
 ```
@@ -339,37 +339,37 @@ Click: 🗑️ Clean
 
 ---
 
-#### 🎛️ **Panel Lateral de PlatformIO**
+#### Panel Lateral de PlatformIO
 
-Haz click en el ícono de **hormiga/alien** 👽 en la barra lateral izquierda de VS Code:
+Haz click en el ícono de **PlatformIO** en la barra lateral izquierda de VS Code:
 
 ```
 ┌─────────────────────────────────────────┐
 │  PLATFORMIO SIDEBAR                     │
 ├─────────────────────────────────────────┤
 │                                         │
-│  📁 PROJECT TASKS                       │
+│  PROJECT TASKS                          │
 │    └─ esp32dev                          │
 │       ├─ General                        │
-│       │  ├─ Build                       │ ← Compilar
-│       │  ├─ Clean                       │ ← Limpiar
-│       │  ├─ Upload                      │ ← Subir
-│       │  └─ Monitor                     │ ← Monitor serial
+│       │  ├─ Build                       │
+│       │  ├─ Clean                       │
+│       │  ├─ Upload                      │
+│       │  └─ Monitor                     │
 │       │                                 │
 │       ├─ Advanced                       │
-│       │  ├─ Upload and Monitor          │ ← Más usado
-│       │  ├─ Erase Flash                 │ ← Borrar todo
-│       │  ├─ Upload File System Image    │ ← Subir LittleFS
-│       │  └─ Verbose Build               │ ← Build con detalles
+│       │  ├─ Upload and Monitor          │
+│       │  ├─ Erase Flash                 │
+│       │  ├─ Upload File System Image    │
+│       │  └─ Verbose Build               │
 │       │                                 │
 │       └─ Platform                       │
-│          └─ Update                      │ ← Actualizar ESP32 SDK
+│          └─ Update                      │
 │                                         │
-│  📚 LIBRARIES                           │
+│  LIBRARIES                              │
 │    └─ Search Libraries                  │
 │    └─ Update All                        │
 │                                         │
-│  🔍 QUICK ACCESS                        │
+│  QUICK ACCESS                           │
 │    └─ PIO Home                          │
 │    └─ Open Project                      │
 │    └─ New Project                       │
@@ -379,7 +379,7 @@ Haz click en el ícono de **hormiga/alien** 👽 en la barra lateral izquierda d
 
 ---
 
-#### ⚡ **Atajos de Teclado (Opcional)**
+#### Atajos de Teclado (Opcional)
 
 Configura atajos personalizados en VS Code:
 
@@ -397,7 +397,7 @@ Para configurar:
 
 ---
 
-#### 📺 **Monitor Serial - Comandos Útiles**
+#### Monitor Serial - Comandos Útiles
 
 Cuando el monitor serial está activo:
 
@@ -419,9 +419,9 @@ Ctrl + L
 
 ---
 
-### 📋 **Comandos de Terminal - Referencia Completa**
+### Comandos de Terminal - Referencia Completa
 
-#### **Comandos Básicos**
+#### Comandos Básicos
 
 ```powershell
 # 1. Compilar proyecto
@@ -445,7 +445,7 @@ pio run --target erase
 
 ---
 
-#### **Comandos con Opciones Avanzadas**
+#### Comandos con Opciones Avanzadas
 
 ```powershell
 # Subir especificando puerto COM
@@ -469,7 +469,7 @@ pio run --target size
 
 ---
 
-#### **Comandos de Gestión de Librerías**
+#### Comandos de Gestión de Librerías
 
 ```powershell
 # Buscar librería
@@ -490,7 +490,7 @@ pio pkg uninstall "adafruit/Adafruit MPU6050"
 
 ---
 
-#### **Comandos de Información**
+#### Comandos de Información
 
 ```powershell
 # Ver información del sistema
@@ -508,7 +508,7 @@ pio project config
 
 ---
 
-#### **Comandos de Limpieza Total**
+#### Comandos de Limpieza Total
 
 ```powershell
 # Limpiar caché completo de PlatformIO (Windows PowerShell)
@@ -526,19 +526,19 @@ pio run
 
 ---
 
-### 🎯 Flujo de Trabajo Típico
+### Flujo de Trabajo Típico
 
-#### **Primera vez (Setup inicial):**
+#### Primera vez (Setup inicial):
 
 **Opción A - Usando Botones:**
 ```
-1. Click: ✓ Build  → Verifica que compila sin errores
+1. Click: BUILD → Verifica que compila sin errores
 2. Conecta ESP32 por USB
-3. Click: ↻ Upload and Monitor  → Sube y muestra logs
+3. Click: UPLOAD+MON → Sube y muestra logs
 4. Verifica en monitor:
-   ✅ "WiFi AP iniciado"
-   ✅ "Servidor web iniciado"
-   ✅ "MPU6050 inicializado"
+   - "WiFi AP iniciado"
+   - "Servidor web iniciado"
+   - "MPU6050 inicializado"
 ```
 
 **Opción B - Usando Terminal:**
@@ -557,13 +557,13 @@ pio run --target upload --target monitor
 
 ---
 
-#### **Durante desarrollo (cada cambio):**
+#### Durante desarrollo (cada cambio):
 
 **Opción A - Usando Botones (Más Rápido):**
 ```
 1. Modifica código en src/main.cpp
 2. Guarda archivo (Ctrl+S)
-3. Click: ↻ Upload and Monitor
+3. Click: UPLOAD+MON
 4. Espera a ver logs en monitor serial
 ```
 
@@ -575,15 +575,15 @@ pio run --target upload --target monitor
 
 ---
 
-#### **Si hay problemas:**
+#### Si hay problemas:
 
 **Opción A - Usando Botones:**
 ```
-1. Click: 🗑️ Clean
-2. Click: ✓ Build  → Recompila todo
+1. Click: CLEAN
+2. Click: BUILD → Recompila todo
 3. Si persiste el error:
    - Panel lateral PlatformIO → esp32dev → Advanced → Erase Flash
-4. Click: → Upload
+4. Click: UPLOAD
 ```
 
 **Opción B - Usando Terminal:**
@@ -603,20 +603,20 @@ pio run --target upload
 
 ---
 
-### 🔍 **Comparación: Botones vs Terminal**
+### Comparación: Botones vs Terminal
 
 | Tarea | Botones VS Code | Terminal | Recomendación |
 |-------|-----------------|----------|---------------|
-| **Compilar** | Click: ✓ Build | `pio run` | Botón (más visual) |
-| **Subir código** | Click: → Upload | `pio run --target upload` | Botón (un click) |
-| **Subir + Monitor** | Click: ↻ | `pio run --target upload --target monitor` | Botón (más rápido) |
-| **Monitor serial** | Click: 🔌 | `pio device monitor` | Botón (más fácil) |
-| **Limpiar** | Click: 🗑️ | `pio run --target clean` | Botón (simple) |
+| **Compilar** | Click: BUILD | `pio run` | Botón (más visual) |
+| **Subir código** | Click: UPLOAD | `pio run --target upload` | Botón (un click) |
+| **Subir + Monitor** | Click: UPLOAD+MON | `pio run --target upload --target monitor` | Botón (más rápido) |
+| **Monitor serial** | Click: MONITOR | `pio device monitor` | Botón (más fácil) |
+| **Limpiar** | Click: CLEAN | `pio run --target clean` | Botón (simple) |
 | **Borrar flash** | Panel → Erase Flash | `pio run --target erase` | Terminal (más control) |
-| **Especificar puerto** | ❌ No disponible | `pio run --upload-port COM3` | ✅ **Terminal** |
-| **Velocidad upload** | ❌ No disponible | `pio run --upload-speed 115200` | ✅ **Terminal** |
+| **Especificar puerto** | No disponible | `pio run --upload-port COM3` | **Terminal** |
+| **Velocidad upload** | No disponible | `pio run --upload-speed 115200` | **Terminal** |
 | **Verbose build** | Panel → Verbose Build | `pio run --verbose` | Cualquiera |
-| **Automatización** | ❌ No | ✅ Scripts .bat/.ps1 | ✅ **Terminal** |
+| **Automatización** | No | Scripts .bat/.ps1 | **Terminal** |
 
 **Conclusión:**
 - **Botones:** Mejor para desarrollo diario (más rápido, visual)
@@ -624,35 +624,35 @@ pio run --target upload
 
 ---
 
-### 💡 **Tips y Trucos**
+### Tips y Trucos
 
-#### **1. Abrir PlatformIO rápidamente**
+#### 1. Abrir PlatformIO rápidamente
 ```
-Método 1: Click en ícono 👽 en barra lateral
+Método 1: Click en ícono PlatformIO en barra lateral
 Método 2: Ctrl+Shift+P → "PlatformIO: Home"
-Método 3: Click en 🏠 en barra inferior
+Método 3: Click en HOME en barra inferior
 ```
 
-#### **2. Ver salida de compilación completa**
+#### 2. Ver salida de compilación completa
 ```
 Método 1: Terminal → Problems (Ctrl+Shift+M)
 Método 2: Terminal → Output → Seleccionar "PlatformIO"
 ```
 
-#### **3. Cambiar entre proyectos**
+#### 3. Cambiar entre proyectos
 ```
-Click: 🏠 PlatformIO Home → Open Project
+Click: HOME PlatformIO Home → Open Project
 O bien: File → Open Folder → Seleccionar proyecto
 ```
 
-#### **4. Autocompletar código**
+#### 4. Autocompletar código
 ```
 PlatformIO instala automáticamente IntelliSense para ESP32
 Ctrl+Space → Muestra funciones disponibles
 Ctrl+Click en función → Va a definición
 ```
 
-#### **5. Ver uso de memoria**
+#### 5. Ver uso de memoria
 ```
 Después de compilar, busca en terminal:
 RAM:   [====      ]  43.2% (usado XXXXX bytes)
@@ -661,28 +661,28 @@ Flash: [========  ]  82.1% (usado XXXXX bytes)
 
 ---
 
-### 💻 Atajos en VS Code (PlatformIO)
+### Atajos en VS Code (PlatformIO)
 
 Si prefieres usar la interfaz gráfica:
 
-| Icono | Nombre | Equivalente |
+| Botón | Nombre | Equivalente |
 |-------|--------|-------------|
-| ✓ | Build | `pio run` |
-| → | Upload | `pio run --target upload` |
-| 🗑️ | Clean | `pio run --target clean` |
-| 🔌 | Serial Monitor | `pio device monitor` |
-| ↻ | Upload and Monitor | `pio run --target upload --target monitor` |
+| BUILD | Build | `pio run` |
+| UPLOAD | Upload | `pio run --target upload` |
+| CLEAN | Clean | `pio run --target clean` |
+| MONITOR | Serial Monitor | `pio device monitor` |
+| UPLOAD+MON | Upload and Monitor | `pio run --target upload --target monitor` |
 
 **Ubicación:** Barra inferior de VS Code (cuando tienes un archivo del proyecto abierto)
 
 ---
 
-### 📊 Verificar Compilación Exitosa
+### Verificar Compilación Exitosa
 
 Después de `pio run`, verás:
 
 ```
-✅ Compilación exitosa:
+Compilación exitosa:
 Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
 RAM:   [=         ]  13.6% (used 44536 bytes from 327680 bytes)
 Flash: [======    ]  67.9% (used 890965 bytes from 1310720 bytes)

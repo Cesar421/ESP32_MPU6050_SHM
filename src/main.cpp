@@ -583,8 +583,8 @@ String getIndexHTML() {
         </div>
 
         <div class="card">
-            <h2>📁 Archivos de Datos</h2>
-            <button class="btn-success" onclick="refreshFiles()" style="margin-bottom: 15px;">🔄 Actualizar Lista</button>
+            <h2>Archivos de Datos</h2>
+            <button class="btn-success" onclick="refreshFiles()" style="margin-bottom: 15px;">Actualizar Lista</button>
             <div id="file-list"></div>
         </div>
     </div>
@@ -691,9 +691,9 @@ String getIndexHTML() {
                             <small>${sizeKB} KB - ${isBinary ? 'Binario (' + samples + ' muestras)' : 'Otro formato'}</small>
                         </div>
                         <div class="file-actions">
-                            ${isBinary ? '<button class="btn-action" onclick="convertToCSV(\'' + name + '\')">📄 CSV</button>' : ''}
-                            <button class="btn-success" onclick="downloadFile('${name}')">⬇️ BIN</button>
-                            <button class="btn-danger" onclick="deleteFile('${name}')">🗑️</button>
+                            ${isBinary ? '<button class="btn-action" onclick="convertToCSV(\'' + name + '\')">CSV</button>' : ''}
+                            <button class="btn-success" onclick="downloadFile('${name}')">BIN</button>
+                            <button class="btn-danger" onclick="deleteFile('${name}')">DEL</button>
                         </div>
                     `;
                     fileList.appendChild(fileDiv);
