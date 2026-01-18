@@ -958,11 +958,11 @@ Ejemplo práctico:
 │  OPCIÓN 1: NAVEGADOR (Recomendado para empezar)         │
 │  ═══════════════════════════════════════════════         │
 │                                                          │
-│  ✅ No necesitas Python                                 │
-│  ✅ Funciona desde celular o PC                         │
-│  ✅ Interfaz visual con botones                         │
-│  ✅ Ver datos en tiempo real                            │
-│  ✅ Descargar archivos manualmente                      │
+│   No necesitas Python                                 │
+│   Funciona desde celular o PC                         │
+│   Interfaz visual con botones                         │
+│   Ver datos en tiempo real                            │
+│   Descargar archivos manualmente                      │
 │                                                          │
 │  http://192.168.4.1                                     │
 └──────────────────────────────────────────────────────────┘
